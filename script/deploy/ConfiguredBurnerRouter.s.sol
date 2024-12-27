@@ -15,7 +15,7 @@ contract BurnerRouterScript is Script {
         address burnerRouterFactory = address(0x80154294963b0D81011706cc7f90bec6b7A68852);
 
         // manager of the routers receivers
-        address owner = address(0x0);
+        address owner = address(0xD0d7F8a5a86d8271ff87ff24145Cf40CEa9F7A39);
 
         // collateral asset of the vault
         address collateral = address(0xBC9fD18dc74059E208a185889E364ECF554B87);
@@ -23,8 +23,8 @@ contract BurnerRouterScript is Script {
         // delay for the setting a new receiver
         uint48 delay = 0;
 
-        // a default receiver of slashed funds
-        address globalReceiver = address(0x0);
+        // a single ether.fi gnosis to receive all slashed funds (EOA for testnet)
+        address globalReceiver = address(0xD0d7F8a5a86d8271ff87ff24145Cf40CEa9F7A39);
 
         // to set slashers on a more granular level (don't set and use the default receiver)
         IBurnerRouter.NetworkReceiver[] calldata networkReceivers = new IBurnerRouter.NetworkReceiver[](0);
